@@ -12,8 +12,8 @@ struct PersonRow: View {
     
     var body: some View {
         VStack{
-            Text(person.name!)
-            Text(String(person.age!))
+            Text(person.name)
+            Text(String(person.age))
         }
     }
 }

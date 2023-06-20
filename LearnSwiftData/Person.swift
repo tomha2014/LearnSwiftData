@@ -11,8 +11,8 @@ import SwiftData
 
 @Model
 final class Person{
-    var name: String?
-    var age: Int?
+    var name: String = ""
+    var age: Int = 0
     
     init( name: String, age: Int) {
         self.name = name

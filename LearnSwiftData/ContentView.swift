@@ -12,7 +12,6 @@ struct ContentView: View {
     @Environment(\.modelContext) private var context
     @Query  var people: [Person]
     
-    
     var body: some View {
         NavigationStack{
             VStack {
@@ -30,19 +29,17 @@ struct ContentView: View {
             .navigationTitle("Learn Swift Data")
             .toolbar {
                 Button("Add") {
-//                    let oldest = people.max { $0.age < $1.age }
-//                    var age = 0
-//                    if (oldest != nil){
-//                        age = oldest!.age
-//                    }
+                    let oldest = people.max { $0.age < $1.age }
+                    var newAge = 0
+                    if (oldest != nil){
+                        newAge = oldest!.age
+                    }
                     
                     let person = Person(
                         name: "Test Person",
-                        age: 2
+                        age: newAge + 1
                     )
-                    
                     context.insert(person)
-                    
                 }
             }
         }
