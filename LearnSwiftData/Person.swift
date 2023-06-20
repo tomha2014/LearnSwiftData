@@ -11,15 +11,10 @@ import SwiftData
 
 @Model
 final class Person{
-    @Attribute(.unique)
-    var id: UUID
-    
-    var name: String
-    var age: Int
-//    var address: Address?
+    var name: String?
+    var age: Int?
     
     init( name: String, age: Int) {
-        self.id = UUID()
         self.name = name
         self.age = age
     }
