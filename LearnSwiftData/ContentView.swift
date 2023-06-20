@@ -6,16 +6,43 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Query  var people: [Person]
+    @Environment(\.modelContext) private var context
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            VStack {
+                List {
+                    ForEach(people, id: \.id) { person in
+                        PersonRow(person: person)
+                    }
+                    .onDelete(perform: { indexSet in
+                        if let index = indexSet.first{
+                            context.delete(people[index])
+                        }
+                    })
+                }
+            }
+            .navigationTitle("Learn Swift Data")
+            .toolbar {
+                Button("Add") {
+                    let oldest = people.max { $0.age < $1.age }
+                    var age = 0
+                    if (oldest != nil){
+                        age = oldest!.age
+                    }
+                    let person = Person(
+                        name: "Test Person",
+                        age: age+1
+                    )
+                    
+                    context.insert(person)
+                }
+            }
         }
-        .padding()
     }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0229A7842A41D40C001934A8 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7832A41D40C001934A8 /* Address.swift */; };
+		0256CB742A3E817E0063BB99 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256CB732A3E817E0063BB99 /* Person.swift */; };
+		0256CB762A3E81DA0063BB99 /* PersonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256CB752A3E81DA0063BB99 /* PersonRow.swift */; };
 		027CBBAB2A3DD7190041D979 /* LearnSwiftDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CBBAA2A3DD7190041D979 /* LearnSwiftDataApp.swift */; };
 		027CBBAD2A3DD7190041D979 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CBBAC2A3DD7190041D979 /* ContentView.swift */; };
 		027CBBAF2A3DD71A0041D979 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027CBBAE2A3DD71A0041D979 /* Assets.xcassets */; };
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0229A7832A41D40C001934A8 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		0256CB732A3E817E0063BB99 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0256CB752A3E81DA0063BB99 /* PersonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRow.swift; sourceTree = "<group>"; };
+		0256CB772A3F6C9E0063BB99 /* LearnSwiftData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnSwiftData.entitlements; sourceTree = "<group>"; };
 		027CBBA72A3DD7190041D979 /* LearnSwiftData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027CBBAA2A3DD7190041D979 /* LearnSwiftDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftDataApp.swift; sourceTree = "<group>"; };
 		027CBBAC2A3DD7190041D979 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,10 +101,14 @@
 		027CBBA92A3DD7190041D979 /* LearnSwiftData */ = {
 			isa = PBXGroup;
 			children = (
+				0256CB772A3F6C9E0063BB99 /* LearnSwiftData.entitlements */,
 				027CBBAA2A3DD7190041D979 /* LearnSwiftDataApp.swift */,
 				027CBBAC2A3DD7190041D979 /* ContentView.swift */,
 				027CBBAE2A3DD71A0041D979 /* Assets.xcassets */,
 				027CBBB02A3DD71A0041D979 /* Preview Content */,
+				0256CB732A3E817E0063BB99 /* Person.swift */,
+				0256CB752A3E81DA0063BB99 /* PersonRow.swift */,
+				0229A7832A41D40C001934A8 /* Address.swift */,
 			);
 			path = LearnSwiftData;
 			sourceTree = "<group>";
@@ -257,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0256CB742A3E817E0063BB99 /* Person.swift in Sources */,
+				0256CB762A3E81DA0063BB99 /* PersonRow.swift in Sources */,
 				027CBBAD2A3DD7190041D979 /* ContentView.swift in Sources */,
 				027CBBAB2A3DD7190041D979 /* LearnSwiftDataApp.swift in Sources */,
+				0229A7842A41D40C001934A8 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LearnSwiftData/LearnSwiftData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftData/Preview Content\"";
@@ -448,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LearnSwiftData/LearnSwiftData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftData/Preview Content\"";
