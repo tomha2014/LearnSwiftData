@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0229A7842A41D40C001934A8 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7832A41D40C001934A8 /* Address.swift */; };
+		0229A7862A434105001934A8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7852A434105001934A8 /* Utils.swift */; };
+		0229A7872A434105001934A8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7852A434105001934A8 /* Utils.swift */; };
+		0229A7892A43418A001934A8 /* UtilsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7882A43418A001934A8 /* UtilsSpec.swift */; };
+		0229A78A2A4341CB001934A8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256CB732A3E817E0063BB99 /* Person.swift */; };
+		0229A78C2A43425E001934A8 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7832A41D40C001934A8 /* Address.swift */; };
 		0256CB742A3E817E0063BB99 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256CB732A3E817E0063BB99 /* Person.swift */; };
 		0256CB762A3E81DA0063BB99 /* PersonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256CB752A3E81DA0063BB99 /* PersonRow.swift */; };
 		027CBBAB2A3DD7190041D979 /* LearnSwiftDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CBBAA2A3DD7190041D979 /* LearnSwiftDataApp.swift */; };
@@ -38,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		0229A7832A41D40C001934A8 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		0229A7852A434105001934A8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0229A7882A43418A001934A8 /* UtilsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsSpec.swift; sourceTree = "<group>"; };
 		0256CB732A3E817E0063BB99 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		0256CB752A3E81DA0063BB99 /* PersonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRow.swift; sourceTree = "<group>"; };
 		0256CB772A3F6C9E0063BB99 /* LearnSwiftData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnSwiftData.entitlements; sourceTree = "<group>"; };
@@ -78,6 +85,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0229A78B2A434253001934A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0256CB732A3E817E0063BB99 /* Person.swift */,
+				0229A7832A41D40C001934A8 /* Address.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0229A78D2A43426F001934A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0256CB752A3E81DA0063BB99 /* PersonRow.swift */,
+				027CBBAC2A3DD7190041D979 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0229A78E2A434280001934A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0229A7852A434105001934A8 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0229A78F2A434291001934A8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				027CBBAA2A3DD7190041D979 /* LearnSwiftDataApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		027CBB9E2A3DD7190041D979 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +142,13 @@
 		027CBBA92A3DD7190041D979 /* LearnSwiftData */ = {
 			isa = PBXGroup;
 			children = (
+				0229A78F2A434291001934A8 /* App */,
+				0229A78E2A434280001934A8 /* Utils */,
+				0229A78D2A43426F001934A8 /* Views */,
+				0229A78B2A434253001934A8 /* Models */,
 				0256CB772A3F6C9E0063BB99 /* LearnSwiftData.entitlements */,
-				027CBBAA2A3DD7190041D979 /* LearnSwiftDataApp.swift */,
-				027CBBAC2A3DD7190041D979 /* ContentView.swift */,
 				027CBBAE2A3DD71A0041D979 /* Assets.xcassets */,
 				027CBBB02A3DD71A0041D979 /* Preview Content */,
-				0256CB732A3E817E0063BB99 /* Person.swift */,
-				0256CB752A3E81DA0063BB99 /* PersonRow.swift */,
-				0229A7832A41D40C001934A8 /* Address.swift */,
 			);
 			path = LearnSwiftData;
 			sourceTree = "<group>";
@@ -125,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				027CBBBB2A3DD71A0041D979 /* LearnSwiftDataTests.swift */,
+				0229A7882A43418A001934A8 /* UtilsSpec.swift */,
 			);
 			path = LearnSwiftDataTests;
 			sourceTree = "<group>";
@@ -273,6 +314,7 @@
 				027CBBAD2A3DD7190041D979 /* ContentView.swift in Sources */,
 				027CBBAB2A3DD7190041D979 /* LearnSwiftDataApp.swift in Sources */,
 				0229A7842A41D40C001934A8 /* Address.swift in Sources */,
+				0229A7862A434105001934A8 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				027CBBBC2A3DD71A0041D979 /* LearnSwiftDataTests.swift in Sources */,
+				0229A7892A43418A001934A8 /* UtilsSpec.swift in Sources */,
+				0229A78A2A4341CB001934A8 /* Person.swift in Sources */,
+				0229A7872A434105001934A8 /* Utils.swift in Sources */,
+				0229A78C2A43425E001934A8 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

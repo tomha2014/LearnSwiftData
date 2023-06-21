@@ -8,8 +8,16 @@
 import SwiftUI
 import SwiftData
 
+/// This is the main view
+///
+/// it shows a list of people
+///
 struct ContentView: View {
+    
+    /// This is the SwiftData context that allows CloudKit Syncing
     @Environment(\.modelContext) private var context
+    
+    /// the people that have been added. This is Synced from CloudKit
     @Query(sort: \.age, order: .forward) var people: [Person]
     
     var body: some View {
@@ -34,7 +42,7 @@ struct ContentView: View {
                 Button("Add") {
                     let person = Person(
                         name: "Test Person",
-                        age: getNextAge(people: people)
+                        age: Utils.getNextAge(people: people)
                     )
                     let address = Address(
                         street: "123 Main Street",
@@ -48,15 +56,6 @@ struct ContentView: View {
                 }
             }
         }
-    }
-    
-    func getNextAge(people: [Person]) -> Int {
-        let oldest = people.max { $0.age < $1.age }
-
-        if let oldest = oldest {
-            return oldest.age + 1
-        }
-        return 0
     }
 }
 
