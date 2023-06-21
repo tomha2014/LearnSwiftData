@@ -12,8 +12,11 @@ struct PersonRow: View {
     
     var body: some View {
         VStack{
-            Text(person.name)
-            Text(String(person.age))
+            Text("\(person.name) - \(person.age)")
+            if let address = person.address{
+                Text("\(address.street)")
+                Text("\(address.city), \(address.state) \(address.zip)")
+            }
         }
     }
 }

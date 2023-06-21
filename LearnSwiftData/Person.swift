@@ -13,6 +13,7 @@ import SwiftData
 final class Person{
     var name: String = ""
     var age: Int = 0
+    @Relationship(inverse: \Address.person)  var address: Address?
     
     init( name: String, age: Int) {
         self.name = name

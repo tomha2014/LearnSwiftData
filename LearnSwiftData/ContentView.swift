@@ -10,7 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var context
-    @Query  var people: [Person]
+    @Query(sort: \.age, order: .forward) var people: [Person]
     
     var body: some View {
         NavigationStack{
@@ -26,23 +26,37 @@ struct ContentView: View {
                     })
                 }
             }
+            .onAppear(){
+                
+            }
             .navigationTitle("Learn Swift Data")
             .toolbar {
                 Button("Add") {
-                    let oldest = people.max { $0.age < $1.age }
-                    var newAge = 0
-                    if (oldest != nil){
-                        newAge = oldest!.age
-                    }
-                    
                     let person = Person(
                         name: "Test Person",
-                        age: newAge + 1
+                        age: getNextAge(people: people)
                     )
+                    let address = Address(
+                        street: "123 Main Street",
+                        city: "Marrietta",
+                        state: "Ga",
+                        zip: "30062"
+                    )
+                    
+                    person.address = address
                     context.insert(person)
                 }
             }
         }
+    }
+    
+    func getNextAge(people: [Person]) -> Int {
+        let oldest = people.max { $0.age < $1.age }
+
+        if let oldest = oldest {
+            return oldest.age + 1
+        }
+        return 0
     }
 }
 

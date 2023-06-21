@@ -25,9 +25,7 @@ struct LearnSwiftDataApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//                .modelContainer(for: [Person.self])
         }
-        .modelContainer (container)
-        
+        .modelContainer (container)        
     }
 }
